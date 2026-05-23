@@ -1,5 +1,7 @@
 # Mobile Submission Skill
 
+[![skills.sh](https://skills.sh/b/hhushhas/mobile-submission-skill)](https://skills.sh/hhushhas/mobile-submission-skill)
+
 An Agent Skills compatible workflow for preparing, reviewing, and submitting iOS and Android apps to App Store Connect and Google Play.
 
 The skill covers:
