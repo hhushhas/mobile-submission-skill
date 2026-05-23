@@ -23,7 +23,7 @@ Install from this repository once it is indexed by your skill manager:
 npx skills add hhushhas/mobile-submission-skill
 ```
 
-You can also copy this folder into your agent's skills directory and invoke:
+You can also copy the `mobile-submission/` folder into your agent's skills directory and invoke:
 
 ```text
 $mobile-submission
@@ -31,11 +31,11 @@ $mobile-submission
 
 ### ChatGPT / OpenAI Skills
 
-OpenAI skills can be uploaded from the Skills UI. Zip the `mobile-submission-skill` folder, then upload it from ChatGPT's Skills page or your workspace skill editor.
+OpenAI skills can be uploaded from the Skills UI. Zip the `mobile-submission/` folder, then upload it from ChatGPT's Skills page or your workspace skill editor.
 
 ### Claude Skills
 
-Claude supports custom skill ZIP uploads. Zip this folder and upload it from Claude's Skills customization page. Team/Enterprise sharing depends on your organization settings.
+Claude supports custom skill ZIP uploads. Zip the `mobile-submission/` folder and upload it from Claude's Skills customization page. Team/Enterprise sharing depends on your organization settings.
 
 ## Expected Project Artifacts
 
@@ -71,10 +71,11 @@ The skill includes an optional Growth Pass for ASO, store conversion, paid acqui
 ## Repository Layout
 
 ```text
-SKILL.md
-assets/mobile-submission-packet-template.yaml
-agents/openai.yaml
-references/
+mobile-submission/
+  SKILL.md
+  assets/mobile-submission-packet-template.yaml
+  agents/openai.yaml
+  references/
 ```
 
 ## License

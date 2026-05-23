@@ -1,6 +1,7 @@
 ---
 name: mobile-submission
 description: "Orchestrate iOS and Android store releases from readiness review through App Store Connect and Google Play submission. Use for mobile app submission preflight, app-record bootstrap, rejection-risk review, submission packet creation, human console guidance, Apple/Google CLI/API execution, dry-runs, submit, and resume from scratchpad/mobile-submission-packet.yaml."
+license: MIT
 ---
 
 # Mobile Submission
