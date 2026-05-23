@@ -17,10 +17,22 @@ The skill covers:
 
 ### Codex / Agent Skills compatible agents
 
+Install with GitHub's skill command:
+
+```bash
+gh skill install hhushhas/mobile-submission-skill mobile-submission
+```
+
 Install from this repository once it is indexed by your skill manager:
 
 ```bash
 npx skills add hhushhas/mobile-submission-skill
+```
+
+Pin the first public release:
+
+```bash
+gh skill install hhushhas/mobile-submission-skill mobile-submission --pin v1.0.0
 ```
 
 You can also copy the `mobile-submission/` folder into your agent's skills directory and invoke:
