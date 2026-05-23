@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mobile Submission Skill</title>
+    <meta
+      name="description"
+      content="An Agent Skill for mobile app store readiness, App Store Connect and Google Play submission, guided console tasks, and growth planning."
+    />
+    <meta property="og:title" content="Mobile Submission Skill" />
+    <meta
+      property="og:description"
+      content="Take iOS and Android apps from repository discovery to review-ready submission with guided Apple and Google console work."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hhushhas.github.io/mobile-submission-skill/" />
+    <meta name="theme-color" content="#101820" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Mobile Submission Skill home">
+        <span class="brand-mark" aria-hidden="true">MS</span>
+        <span>Mobile Submission Skill</span>
+      </a>
+      <nav>
+        <a href="#flow">Flow</a>
+        <a href="#install">Install</a>
+        <a href="#growth">Growth</a>
+        <a href="https://github.com/hhushhas/mobile-submission-skill">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <canvas id="release-canvas" aria-hidden="true"></canvas>
+        <div class="hero-content">
+          <p class="eyebrow">Agent Skill for iOS and Android releases</p>
+          <h1 id="hero-title">Mobile Submission Skill</h1>
+          <p class="hero-copy">
+            From repo discovery to review-ready submission: readiness gates, store packets, guided console tasks, Apple and Google execution, and optional growth planning.
+          </p>
+          <div class="hero-actions" id="install">
+            <a class="button primary" href="https://github.com/hhushhas/mobile-submission-skill">View on GitHub</a>
+            <a class="button secondary" href="https://github.com/hhushhas/mobile-submission-skill/releases/tag/v1.0.0">Download v1.0.0</a>
+          </div>
+          <div class="install-strip" aria-label="Install commands">
+            <code>gh skill install hhushhas/mobile-submission-skill mobile-submission</code>
+            <code>npx skills add hhushhas/mobile-submission-skill --skill mobile-submission</code>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro" aria-labelledby="intro-title">
+        <div class="section-inner intro-grid">
+          <div>
+            <p class="eyebrow">Built for the messy middle</p>
+            <h2 id="intro-title">The part after the app is “done”</h2>
+            <p>
+              Mobile submission is not one command. It is native config, store policy, privacy declarations, review notes, builds, signing, console-only forms, and a final pre-submit check.
+            </p>
+          </div>
+          <div class="terminal" aria-label="Example skill invocation">
+            <div class="terminal-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <pre><code>$mobile-submission
+
+mode: dry-run
+packet: scratchpad/mobile-submission-packet.yaml
+gate_a: ready_warn
+apple: build discovered
+google: track needs confirmation
+human_tasks: 5 console fields</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section flow-section" id="flow" aria-labelledby="flow-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">How it works</p>
+            <h2 id="flow-title">A release operator, not a checklist</h2>
+          </div>
+          <div class="flow-grid">
+            <article>
+              <span>01</span>
+              <h3>Discover</h3>
+              <p>Maps iOS, Android, backend, auth, permissions, assets, privacy URLs, and store metadata from the real repo.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Review</h3>
+              <p>Runs readiness gates for blockers, high-risk issues, polish, and unknowns before submission work begins.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Prepare</h3>
+              <p>Creates a structured packet, human console task list, artifact hashes, review notes, and secret references.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Execute</h3>
+              <p>Delegates Apple and Google workstreams through CLI/API where possible, with dry-run safety by default.</p>
+            </article>
+            <article>
+              <span>05</span>
+              <h3>Guide</h3>
+              <p>For dashboard-only work, gives exact human instructions with field names, control types, and values.</p>
+            </article>
+            <article>
+              <span>06</span>
+              <h3>Submit</h3>
+              <p>Runs a final pre-submit gate, then moves to TestFlight, App Review, or Play track submission when approved.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section console-section" aria-labelledby="console-title">
+        <div class="section-inner console-grid">
+          <div>
+            <p class="eyebrow">Console work without wandering</p>
+            <h2 id="console-title">Dashboard-only fields become guided tasks</h2>
+            <p>
+              Apple and Google still have forms that are better handled by a human. The skill generates targeted instructions instead of sending you into a console maze.
+            </p>
+          </div>
+          <div class="task-preview">
+            <p class="task-label">Google Play: Data Safety</p>
+            <ul>
+              <li><strong>Path</strong><span>Policy &gt; App content &gt; Data safety</span></li>
+              <li><strong>Control</strong><span>Yes/No + data-type flow</span></li>
+              <li><strong>Select</strong><span>No data collected, when evidence supports it</span></li>
+              <li><strong>Confirm</strong><span><code>google data safety done</code></span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section growth-section" id="growth" aria-labelledby="growth-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Optional Growth Pass</p>
+            <h2 id="growth-title">Release cleanly, then improve discovery</h2>
+          </div>
+          <div class="growth-columns">
+            <div>
+              <h3>Store conversion</h3>
+              <p>Audits screenshots, previews, app icon, title, subtitle, descriptions, feature graphic, ratings, and reviews.</p>
+            </div>
+            <div>
+              <h3>ASO and discovery</h3>
+              <p>Reviews Apple keywords, Google metadata, custom product pages, custom store listings, experiments, and vitals.</p>
+            </div>
+            <div>
+              <h3>Paid acquisition</h3>
+              <p>Plans Apple Ads, Google App campaigns, Meta, TikTok, creators, deep links, attribution, and test budgets.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section safety-section" aria-labelledby="safety-title">
+        <div class="section-inner safety-grid">
+          <div>
+            <p class="eyebrow">Safety defaults</p>
+            <h2 id="safety-title">Designed to avoid accidental damage</h2>
+          </div>
+          <ul>
+            <li><strong>Dry-run first</strong><span>No App Store Connect or Google Play mutation by default.</span></li>
+            <li><strong>Secret refs only</strong><span>Uses <code>op://</code>, <code>env:</code>, <code>secret:</code>, and <code>ref:</code> style references.</span></li>
+            <li><strong>Final gate</strong><span>Checks packet, store state, human tasks, listing, privacy, and reviewer access before submission.</span></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Mobile Submission Skill</span>
+      <a href="https://github.com/hhushhas/mobile-submission-skill">GitHub</a>
+      <a href="https://github.com/hhushhas/mobile-submission-skill/releases/download/v1.0.0/mobile-submission-skill-v1.0.0.zip">Skill ZIP</a>
+    </footer>
+
+    <script src="./site.js"></script>
+  </body>
+</html>
