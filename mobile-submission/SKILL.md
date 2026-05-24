@@ -32,33 +32,28 @@ Artifact roles:
 - Learnings: short durable notes from this run that should help future submissions for the same project.
 - Memory: reusable preferences and private setup facts to read before asking repeated questions.
 
-## References
+## Reference Index
 
-Load only the references needed for the current phase:
+Load only the references needed for the current phase. When delegating, tell subagents which reference files to read.
 
-- Readiness and policy mapping:
-  - `references/readiness/feature-to-policy-matrix.md`
-  - `references/readiness/apple-review-preflight.md`
-  - `references/readiness/google-play-preflight.md`
-  - `references/readiness/rejection-risk-taxonomy.md`
-- Growth, ASO, and paid acquisition:
-  - `references/growth/apple-aso.md`
-  - `references/growth/google-play-aso.md`
-  - `references/growth/product-quality.md`
-  - `references/growth/paid-acquisition.md`
-- Human console guidance:
-  - `references/console/apple.md`
-  - `references/console/google.md`
-- Store execution:
-  - `references/execution/asc-cli.md`
-  - `references/execution/gplay-cli.md`
-  - `references/execution/apple-api-setup.md`
-  - `references/execution/google-api-setup.md`
-  - `references/execution/spec-search.md`
-- Missing policy/support/deletion URLs:
-  - `references/execution/static-policy-site.md`
-- Final reporting:
-  - `references/execution/success.md`
+| Need | Read |
+| --- | --- |
+| Map app features to Apple/Google policy risk | `references/readiness/feature-to-policy-matrix.md` |
+| Apple readiness/rejection-risk pass | `references/readiness/apple-review-preflight.md` |
+| Google Play readiness/rejection-risk pass | `references/readiness/google-play-preflight.md` |
+| Severity levels and report shape | `references/readiness/rejection-risk-taxonomy.md` |
+| Human App Store Connect tasks | `references/console/apple.md` |
+| Human Play Console tasks | `references/console/google.md` |
+| Release version/build bumping | `references/execution/versioning.md` |
+| Apple CLI/API execution | `references/execution/asc-cli.md`, `references/execution/apple-api-setup.md` |
+| Google Play CLI/API execution | `references/execution/gplay-cli.md`, `references/execution/google-api-setup.md` |
+| Direct API fallback/spec lookup | `references/execution/spec-search.md` |
+| Missing privacy/support/deletion URLs | `references/execution/static-policy-site.md` |
+| Final report expectations | `references/execution/success.md` |
+| Apple ASO/store conversion | `references/growth/apple-aso.md` |
+| Google Play ASO/store conversion | `references/growth/google-play-aso.md` |
+| Product quality before paid growth | `references/growth/product-quality.md` |
+| Paid acquisition/growth planning | `references/growth/paid-acquisition.md` |
 
 ## Mode Selection
 
@@ -88,6 +83,16 @@ Artifact mode:
 - `packet`: use local artifact paths declared in the packet.
 - `uploaded`: use an existing uploaded store build; verify build ID/version/hash/store state first.
 - `build`: build/export the release artifact from source before upload.
+
+Release versioning:
+
+- Use semantic versioning for the user-visible app version.
+- Patch: `1.0.1` for small bug fixes, copy changes, minor polish, crash fixes, or low-risk internal improvements.
+- Minor: `1.1.0` for new features, meaningful behavior/UI/workflow changes, or medium-sized releases.
+- Major: `2.0.0` for major redesigns, breaking changes, incompatible data migrations, or large product shifts.
+- Always increment platform build identifiers for every uploaded binary: iOS `CFBundleVersion` / Expo `ios.buildNumber`, and Android `versionCode`.
+- Do not keep shipping user-visible changes as `1.0.0`. If unsure, propose a bump and ask the user.
+- Read `references/execution/versioning.md` before building, uploading, or submitting.
 
 ## Memory
 
@@ -227,6 +232,7 @@ Rules:
 - Record artifact hashes when release artifacts exist: `ios.ipa_sha256`, `android.aab_sha256`.
 - For Android, require a new `version_code` when the release AAB changes.
 - For Apple, capture signing/build-path facts: local vs cloud/EAS, certificate, provisioning profile, keychain, build ID.
+- Verify and bump the user-visible release version and platform build identifiers before build/upload. Update app config, native config, packet, and release notes together.
 - For Apple screenshots, note when TestFlight is needed before final screenshot capture.
 
 Create `scratchpad/mobile-console-human-tasks.md` for console-only work.
@@ -300,6 +306,7 @@ Before sending for review, use the strongest available review model/subagent to 
 
 - packet
 - ledger
+- release version/build bump evidence
 - human console task completion
 - App Store Connect/Google Play state
 - uploaded build metadata
